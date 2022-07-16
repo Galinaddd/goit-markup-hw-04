@@ -16,6 +16,10 @@
 
   --header-line: #ececec;
   --card-bottom-line: #eeeeee;
+
+  --background-hero: #C4C4C4;
+  --client-logo: #AFB1B8;
+  --client-background:#F5F5F5;
 }
 /******* Стили позиционирования  *******/
 h1,
@@ -148,6 +152,7 @@ body {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
+  cursor: pointer;
 }
 
 /* Стилизация секции Герой */
@@ -158,7 +163,25 @@ body {
   background-color: var(--background-color);
   color: var(--color-secondary);
   text-align: center;
+ 
+  
 }
+
+.overlay{
+  max-width: 1600px;
+  height: 600px;
+  background-color: var(--background-hero);
+    background-image:linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)), url("../images/icons/hero-bgr.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+                margin-left: auto;
+margin-right: auto;
+}
+
+
+
 .hero-title {
   margin-bottom: 30px;
   font-weight: 900;
@@ -179,6 +202,7 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
+  padding: 10px 32px;
 }
 
 /* Стилизация Заголовки секций */
@@ -207,7 +231,7 @@ body {
 /* Стилизация Секция Особенности */
 .features-title {
   padding-bottom: 10px;
-
+text-transform: uppercase;
   color: var(--title-color);
   font-weight: 700;
   font-size: 14px;
@@ -263,6 +287,9 @@ body {
 .team-card {
   width: calc((100% - 90px) / 4);
   text-align: center;
+  background: var(--color-secondary) ;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-card:not(:last-child) {
@@ -283,6 +310,66 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+
+.sotial-list {
+  display: flex;
+  margin: 16px 32px 0px;
+    justify-content: space-between;
+}
+
+
+.sotial-link{
+  color: var(--client-logo);
+
+  display: flex;
+    width: 44px;
+    height: 44px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.sotial-logo {
+  display: flex;
+  fill: currentColor;
+/* align-items: center;*/
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+.sotial-link:hover,
+.sotial-link:focus
+{background-color: var(--accent-color);
+color: var(--color-secondary);}
+
+
+
+
+/* СЕкція Постійні клієнти */
+.client-list{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+
+
+.client-link{
+  display: flex;
+  width: 170px;
+  height: 92px;
+  
+    color: var(--client-logo);
+  border: 1px solid currentColor ;
+   border-radius: 4px;
+}
+
+
+
 
 /* Стили футера */
 .footer {
@@ -311,6 +398,58 @@ body {
 .foot-adress {
   margin-top: 20px;
 }
+
+
+.join{
+margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 3%;
+   text-transform: uppercase;
+
+}
+
+.sotial-footer{width: 206px;
+height: 80px;}
+
+.footer .sotial-list {
+  display: flex;
+   justify-content: space-between;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+
+.footer .sotial-link {
+  color: var(--color-secondary);
+  background-color: rgba(255, 255, 255, 0.1);;
+
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.footer .sotial-logo {
+  display: flex;
+  fill: currentColor;
+margin-left: auto;
+  margin-right: auto;
+}
+
+.sotial-footer{margin-left: 70px;}
+.footer .sotial-link:hover,
+.footer .sotial-link:focus {
+  background-color: var(--accent-color);
+  color: var(--color-secondary);
+}
+.footer .container{display: flex;
+align-items: baseline;}
+
+
 /* ----------------- */
 
 /* Стилизация Портфолио */
@@ -340,6 +479,16 @@ body {
 .gallery-item {
   width: calc((100% - 60px) / 3);
 }
+
+.gallery-item:hover
+{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+  0px 4px 4px rgba(0, 0, 0, 0.06), 
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+
 .gallery-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
@@ -381,6 +530,51 @@ body {
   margin-bottom: 50px;
 }
 
+.button-list .button:hover, .button-list .button:focus
+{box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+  0px 1px 2px rgba(0, 0, 0, 0.08), 
+  0px 2px 2px rgba(0, 0, 0, 0.12);}
+
 .button-list-item:not(:last-child) {
   margin-right: 8px;
 }
+
+/* Стилизация декоративных елементов */
+.icon{
+margin-right: 10px;
+fill: currentColor;
+}
+
+.icon:hover{
+  fill: var(--accent-color);
+}
+
+
+.icon-header{
+  display:flex;
+  align-items: center;
+ }
+
+ .icon-features{
+  display: flex;
+  background-color: var(--button-color);
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+
+ 
+
+ .client-logo{
+
+  fill: currentColor;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ 
+
