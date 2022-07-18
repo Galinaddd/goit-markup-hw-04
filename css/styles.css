@@ -368,6 +368,7 @@ color: var(--color-secondary);}
   width: 170px;
   height: 92px;
   align-items: center;
+  justify-content: center;
   
     color: var(--client-logo);
   border: 1px solid currentColor ;
@@ -586,8 +587,7 @@ fill: currentColor;
  .client-logo{
 
   fill: currentColor;
-  margin-left: auto;
-  margin-right: auto;
+ 
  }
 
  
